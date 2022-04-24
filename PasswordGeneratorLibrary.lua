@@ -67,12 +67,12 @@ local PasswordGen = {
         "<",
     },
     ["Write"] = writefile,
-    ["Read"] = readfile
-    ["PasswordGenerated"] = ""
-    ["CachedPassword"] = ""
+    ["Read"] = readfile,
+    ["PasswordGenerated"] = ",
+    ["CachedPassword"] = "",
     ["PasswordsSaved"] = (game:GetService("HttpService"):JSONDecode(readfile("RottenPasswordSaver.json")) or {
         ["https://roblox.com/"] = "urmomsercretpasswordomgnocrackpls"
-    })
+    }),
 }
 
 function PasswordGen:Generate(Https, Lenght, Difficult)
